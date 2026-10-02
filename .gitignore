@@ -76,3 +76,5 @@ Debug/
 Release/
 *.ipch
 *.sln.docstates
+*.exe
+*.user
