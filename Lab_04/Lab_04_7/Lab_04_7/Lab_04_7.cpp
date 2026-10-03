@@ -41,7 +41,7 @@ int main()
 			R = (2.0 * n - 1.0) / ((2.0 * n + 1.0) * x * x);
 			a *= R;
 			S += a;
-		} while (abs(a) >= eps);
+		} while (fabs(a) >= eps);
 		cout << "|" << setw(7) << setprecision(2) << x << " |"
 			<< setw(15) << setprecision(5) << log((x + 1.0) / (x - 1.0)) << " |"
 			<< setw(10) << setprecision(5) << S << " |"
