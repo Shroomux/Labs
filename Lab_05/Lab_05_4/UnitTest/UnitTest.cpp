@@ -18,6 +18,8 @@ namespace UnitTest
 			double exp = cos(sin(1.0)) / (1.0 + sin(1.0) * sin(1.0));
 			double act = S0(K, N);
 			Assert::AreEqual(exp, act, 0.00001);
+			Assert::AreEqual(S0(K, N), S1(K, N, K), 0.00001);
+			Assert::AreEqual(S0(K, N), S3(K, N, K, 0), 0.00001);
 		}
 	};
 }
