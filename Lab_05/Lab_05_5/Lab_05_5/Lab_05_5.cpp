@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int f(int m, int a, int c, int level, int &depth)
+int f(const int m, const int a, const int c, const int level, int& depth)
 {
     if (level > depth)
         depth = level;
