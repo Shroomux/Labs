@@ -10,11 +10,14 @@ int f(const int m, const int a, const int c, const int level, int& depth)
         depth = level;
     cout << "level = " << level << endl;
 
-    int g = ((a - m + c) % 10 + 10) % 10;
+    
     if (m >= 0 && m <= 9)
         return m;
     else
+    {
+        int g = ((a - m + c) % 10 + 10) % 10;
         return g * f(m - 1 - g, a, c, level + 1, depth) + m;
+    }
         
 }
 
@@ -28,4 +31,6 @@ int main()
     int res = f(m, a, c, 1, depth);
     cout << "f(m) = " << res << endl;
     cout << "depth = " << depth << endl;
+
+    return 0;
 }
